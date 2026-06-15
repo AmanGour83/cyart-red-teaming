@@ -1,0 +1,366 @@
+<get_results_response status="200" status_text="OK"><result id="8060c512-a6f4-4cb2-a98e-881600ee4457"><name>Operating System (OS) End of Life (EOL) Detection</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:10:37Z</modification_time><comment></comment><creation_time>2026-05-21T08:10:37Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><detection><result id="bbca1afd-4e9f-40ac-ac0a-81b4a4f5b413"><details><detail><name>product</name><value>cpe:/o:canonical:ubuntu_linux:8.04</value></detail><detail><name>location</name><value>general/tcp</value></detail><detail><name>source_oid</name><value>1.3.6.1.4.1.25623.1.0.105937</value></detail><detail><name>source_name</name><value>OS Detection Consolidation and Reporting</value></detail></details></result></detection><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>general/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.103674"><type>nvt</type><name>Operating System (OS) End of Life (EOL) Detection</name><family>General</family><cvss_base>10.0</cvss_base><severities score="10.0"><severity type="cvss_base_v2"><origin></origin><date>2013-03-05T17:11:24Z</date><score>10.0</score><value>AV:N/AC:L/Au:N/C:C/I:C/A:C</value></severity></severities><tags>cvss_base_vector=AV:N/AC:L/Au:N/C:C/I:C/A:C|summary=The Operating System (OS) on the remote host has reached the end
+  of life (EOL) and should not be used anymore.|insight=|affected=|impact=An EOL version of an OS is not receiving any security updates
+  from the vendor. Unfixed security vulnerabilities might be leveraged by an attacker to compromise
+  the security of this host.|solution=Update the OS on the remote host to a version which is still
+  supported and receiving security updates by the vendor.
+
+  Note / Important: Please create an override for this result if the target host is a:
+
+  - Windows system with Extended Security Updates (ESU)
+
+  - System with additional 3rd-party / non-vendor security updates like e.g. from &apos;TuxCare&apos;,
+  &apos;Freexian Extended LTS&apos; or similar|vuldetect=Checks if an EOL version of an OS is present on the target
+  host.|solution_type=Mitigation</tags><solution type='Mitigation'>Update the OS on the remote host to a version which is still
+  supported and receiving security updates by the vendor.
+
+  Note / Important: Please create an override for this result if the target host is a:
+
+  - Windows system with Extended Security Updates (ESU)
+
+  - System with additional 3rd-party / non-vendor security updates like e.g. from &apos;TuxCare&apos;,
+  &apos;Freexian Extended LTS&apos; or similar</solution></nvt><scan_nvt_version>2025-05-21T05:40:19Z</scan_nvt_version><threat>Critical</threat><severity>10.0</severity><qod><value>80</value><type></type></qod><description>The &quot;Ubuntu&quot; Operating System on the remote host has reached the end of life.
+
+CPE:               cpe:/o:canonical:ubuntu_linux:8.04
+Installed version,
+build or SP:       8.04
+EOL date:          2013-05-09
+EOL info:          https://documentation.ubuntu.com/project/release-team/list-of-releases/
+</description><original_threat>Critical</original_threat><original_severity>10</original_severity><compliance>undefined</compliance></result><result id="a2fe33a1-8040-42f1-adf7-212521daf63b"><name>Possible Backdoor: Ingreslock</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:17:04Z</modification_time><comment></comment><creation_time>2026-05-21T08:17:04Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>1524/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.103549"><type>nvt</type><name>Possible Backdoor: Ingreslock</name><family>Gain a shell remotely</family><cvss_base>10.0</cvss_base><severities score="10.0"><severity type="cvss_base_v2"><origin></origin><date>2012-08-22T14:21:38Z</date><score>10.0</score><value>AV:N/AC:L/Au:N/C:C/I:C/A:C</value></severity></severities><tags>cvss_base_vector=AV:N/AC:L/Au:N/C:C/I:C/A:C|summary=A backdoor is installed on the remote host.|insight=|affected=|impact=Attackers can exploit this issue to execute arbitrary commands in the
+  context of the application. Successful attacks will compromise the affected isystem.|solution=A whole cleanup of the infected system is recommended.|vuldetect=|solution_type=Workaround</tags><solution type='Workaround'>A whole cleanup of the infected system is recommended.</solution></nvt><scan_nvt_version>2023-07-25T05:05:58Z</scan_nvt_version><threat>Critical</threat><severity>10.0</severity><qod><value>99</value><type></type></qod><description>The service is answering to an &apos;id;&apos; command with the following response: uid=0(root) gid=0(root)
+</description><original_threat>Critical</original_threat><original_severity>10</original_severity><compliance>undefined</compliance></result><result id="1fcd87d0-f78f-4397-98ca-d815039b1cdd"><name>The rexec service is running</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:12:18Z</modification_time><comment></comment><creation_time>2026-05-21T08:12:18Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>512/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.100111"><type>nvt</type><name>The rexec service is running</name><family>Useless services</family><cvss_base>10.0</cvss_base><severities score="10.0"><severity type="cvss_base_v2"><origin></origin><date>2020-09-29T10:10:42Z</date><score>10.0</score><value>AV:N/AC:L/Au:N/C:C/I:C/A:C</value></severity></severities><tags>cvss_base_vector=AV:N/AC:L/Au:N/C:C/I:C/A:C|summary=This remote host is running a rexec service.|insight=rexec (remote execution client for an exec server) has the same
+  kind of functionality that rsh has: you can execute shell commands on a remote computer.
+
+  The main difference is that rexec authenticate by reading the username and password *unencrypted*
+  from the socket.|affected=|impact=|solution=Disable the rexec service and use alternatives like SSH
+  instead.|vuldetect=Checks whether an rexec service is exposed on the target
+  host.|solution_type=Mitigation</tags><solution type='Mitigation'>Disable the rexec service and use alternatives like SSH
+  instead.</solution><refs><ref type="cve" id="CVE-1999-0618"/></refs></nvt><scan_nvt_version>2023-09-12T05:05:19Z</scan_nvt_version><threat>Critical</threat><severity>10.0</severity><qod><value>80</value><type></type></qod><description>The rexec service was detected on the target system.
+</description><original_threat>Critical</original_threat><original_severity>10</original_severity><compliance>undefined</compliance></result><result id="cc88a8b9-c0b2-45dd-a600-718dd536c863"><name>TWiki &lt; 4.2.4 Multiple XSS / Command Execution Vulnerabilities</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:13:13Z</modification_time><comment></comment><creation_time>2026-05-21T08:13:13Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>80/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.800320"><type>nvt</type><name>TWiki &lt; 4.2.4 Multiple XSS / Command Execution Vulnerabilities</name><family>Web application abuses</family><cvss_base>10.0</cvss_base><severities score="10.0"><severity type="cvss_base_v2"><origin></origin><date>2008-12-16T15:12:00Z</date><score>10.0</score><value>AV:N/AC:L/Au:N/C:C/I:C/A:C</value></severity></severities><tags>cvss_base_vector=AV:N/AC:L/Au:N/C:C/I:C/A:C|summary=TWiki is prone to multiple cross-site scripting (XSS) and
+  command execution vulnerabilities.|insight=The flaws are due to:
+
+  - %URLPARAM{}% variable is not properly sanitized which lets attackers
+    conduct cross-site scripting attack.
+
+  - %SEARCH{}% variable is not properly sanitised before being used in an
+    eval() call which lets the attackers execute perl code through eval
+    injection attack.|affected=TWiki versions prior to 4.2.4.|impact=Successful exploitation could allow execution of arbitrary script code or
+  commands. This could let attackers steal cookie-based authentication credentials or compromise the affected
+  application.|solution=Update to version 4.2.4 or later.|vuldetect=|solution_type=VendorFix</tags><solution type='VendorFix'>Update to version 4.2.4 or later.</solution><refs><ref type="cve" id="CVE-2008-5304"/><ref type="cve" id="CVE-2008-5305"/><ref type="url" id="http://twiki.org/cgi-bin/view/Codev.SecurityAlert-CVE-2008-5304"/><ref type="url" id="http://www.securityfocus.com/bid/32668"/><ref type="url" id="http://www.securityfocus.com/bid/32669"/><ref type="url" id="http://twiki.org/cgi-bin/view/Codev/SecurityAlert-CVE-2008-5305"/></refs></nvt><scan_nvt_version>2025-12-11T05:46:19Z</scan_nvt_version><threat>Critical</threat><severity>10.0</severity><qod><value>80</value><type></type></qod><description>Installed version: 01.Feb.2003
+Fixed version:     4.2.4
+
+</description><original_threat>Critical</original_threat><original_severity>10</original_severity><compliance>undefined</compliance></result><result id="0238fe23-4235-4ed3-9849-e349d985f4a9"><name>rlogin Passwordless Login</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:10:22Z</modification_time><comment></comment><creation_time>2026-05-21T08:10:22Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>513/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.113766"><type>nvt</type><name>rlogin Passwordless Login</name><family>Gain a shell remotely</family><cvss_base>10.0</cvss_base><severities score="10.0"><severity type="cvss_base_v2"><origin></origin><date>2020-09-30T08:50:29Z</date><score>10.0</score><value>AV:N/AC:L/Au:N/C:C/I:C/A:C</value></severity></severities><tags>cvss_base_vector=AV:N/AC:L/Au:N/C:C/I:C/A:C|summary=The rlogin service allows root access without a password.|insight=|affected=|impact=This vulnerability allows an attacker to gain
+  complete control over the target system.|solution=Disable the rlogin service and use alternatives like SSH instead.|vuldetect=Checks if a vulnerable version is present on the target host.|solution_type=Mitigation</tags><solution type='Mitigation'>Disable the rlogin service and use alternatives like SSH instead.</solution></nvt><scan_nvt_version>2020-09-30T09:30:12Z</scan_nvt_version><threat>Critical</threat><severity>10.0</severity><qod><value>80</value><type></type></qod><description>It was possible to gain root access without a password.
+</description><original_threat>Critical</original_threat><original_severity>10</original_severity><compliance>undefined</compliance></result><result id="8f83487f-c289-437f-82c4-385257a537a0"><name>Distributed Ruby (dRuby/DRb) Multiple RCE Vulnerabilities</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:15:19Z</modification_time><comment></comment><creation_time>2026-05-21T08:15:19Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>8787/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.108010"><type>nvt</type><name>Distributed Ruby (dRuby/DRb) Multiple RCE Vulnerabilities</name><family>Gain a shell remotely</family><cvss_base>10.0</cvss_base><severities score="10.0"><severity type="cvss_base_v2"><origin></origin><date>2016-10-28T09:47:00Z</date><score>10.0</score><value>AV:N/AC:L/Au:N/C:C/I:C/A:C</value></severity></severities><tags>cvss_base_vector=AV:N/AC:L/Au:N/C:C/I:C/A:C|summary=Systems using Distributed Ruby (dRuby/DRb), which is available in Ruby versions 1.6
+  and later, may permit unauthorized systems to execute distributed commands.|insight=|affected=|impact=By default, Distributed Ruby does not impose restrictions on allowed hosts or set the
+  $SAFE environment variable to prevent privileged activities. If other controls are not in place, especially if the
+  Distributed Ruby process runs with elevated privileges, an attacker could execute arbitrary system commands or Ruby
+  scripts on the Distributed Ruby server. An attacker may need to know only the URI of the listening Distributed Ruby
+  server to submit Ruby commands.|solution=Administrators of environments that rely on Distributed Ruby should ensure that
+  appropriate controls are in place. Code-level controls may include:
+
+  - Implementing taint on untrusted input
+
+  - Setting $SAFE levels appropriately (&gt;=2 is recommended if untrusted hosts are allowed to submit Ruby commands, and &gt;=3 may be appropriate)
+
+  - Including drb/acl.rb to set ACLEntry to restrict access to trusted hosts|vuldetect=Send a crafted command to the service and check for a remote command execution
+  via the instance_eval or syscall requests.|solution_type=Mitigation</tags><solution type='Mitigation'>Administrators of environments that rely on Distributed Ruby should ensure that
+  appropriate controls are in place. Code-level controls may include:
+
+  - Implementing taint on untrusted input
+
+  - Setting $SAFE levels appropriately (&gt;=2 is recommended if untrusted hosts are allowed to submit Ruby commands, and &gt;=3 may be appropriate)
+
+  - Including drb/acl.rb to set ACLEntry to restrict access to trusted hosts</solution><refs><ref type="url" id="https://tools.cisco.com/security/center/viewAlert.x?alertId=22750"/><ref type="url" id="http://www.securityfocus.com/bid/47071"/><ref type="url" id="http://blog.recurity-labs.com/archives/2011/05/12/druby_for_penetration_testers/"/><ref type="url" id="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/drb/rdoc/DRb.html"/></refs></nvt><scan_nvt_version>2024-06-28T05:05:33Z</scan_nvt_version><threat>Critical</threat><severity>10.0</severity><qod><value>99</value><type></type></qod><description>The service is running in $SAFE &gt;= 1 mode. However it is still possible to run arbitrary syscall commands on the remote host. Sending an invalid syscall the service returned the following response:
+
+Flo:Errno::ENOSYS:bt[&quot;3/usr/lib/ruby/1.8/drb/drb.rb:1555:in `syscall&apos;&quot;0/usr/lib/ruby/1.8/drb/drb.rb:1555:in `send&apos;&quot;4/usr/lib/ruby/1.8/drb/drb.rb:1555:in `__send__&apos;&quot;A/usr/lib/ruby/1.8/drb/drb.rb:1555:in `perform_without_block&apos;&quot;3/usr/lib/ruby/1.8/drb/drb.rb:1515:in `perform&apos;&quot;5/usr/lib/ruby/1.8/drb/drb.rb:1589:in `main_loop&apos;&quot;0/usr/lib/ruby/1.8/drb/drb.rb:1585:in `loop&apos;&quot;5/usr/lib/ruby/1.8/drb/drb.rb:1585:in `main_loop&apos;&quot;1/usr/lib/ruby/1.8/drb/drb.rb:1581:in `start&apos;&quot;5/usr/lib/ruby/1.8/drb/drb.rb:1581:in `main_loop&apos;&quot;//usr/lib/ruby/1.8/drb/drb.rb:1430:in `run&apos;&quot;1/usr/lib/ruby/1.8/drb/drb.rb:1427:in `start&apos;&quot;//usr/lib/ruby/1.8/drb/drb.rb:1427:in `run&apos;&quot;6/usr/lib/ruby/1.8/drb/drb.rb:1347:in `initialize&apos;&quot;//usr/lib/ruby/1.8/drb/drb.rb:1627:in `new&apos;&quot;9/usr/lib/ruby/1.8/drb/drb.rb:1627:in `start_service&apos;&quot;%/usr/sbin/druby_timeserver.rb:12:errnoi+:mesg&quot;Function not implemented
+</description><original_threat>Critical</original_threat><original_severity>10</original_severity><compliance>undefined</compliance></result><result id="8f14c6bf-4980-4107-bcf5-67485f72485d"><name>MySQL / MariaDB Default Credentials (MySQL Protocol)</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:14:49Z</modification_time><comment></comment><creation_time>2026-05-21T08:14:49Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><detection><result id="43ef531f-d987-4cc3-b558-4cdb5ad6d31c"><details><detail><name>product</name><value>cpe:/a:mysql:mysql:5.0.51a</value></detail><detail><name>location</name><value>3306/tcp</value></detail><detail><name>source_oid</name><value>1.3.6.1.4.1.25623.1.0.100152</value></detail><detail><name>source_name</name><value>MariaDB / Oracle MySQL Detection (MySQL Protocol)</value></detail></details></result></detection><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>3306/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.103551"><type>nvt</type><name>MySQL / MariaDB Default Credentials (MySQL Protocol)</name><family>Default Accounts</family><cvss_base>9.8</cvss_base><severities score="9.8"><severity type="cvss_base_v3"><origin>NVD</origin><date>2024-02-07T17:37:28Z</date><score>9.8</score><value>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</value></severity></severities><tags>cvss_base_vector=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H|summary=It was possible to login into the remote MySQL using default
+  credentials.|insight=|affected=The following products are know to use such weak credentials:
+
+  - CVE-2001-0645: Symantec/AXENT NetProwler 3.5.x
+
+  - CVE-2002-1809: Windows binary release of MySQL 3.23.2 through 3.23.52
+
+  - CVE-2004-1532: AppServ 2.5.x and earlier
+
+  - CVE-2004-2357: Proofpoint Protection Server
+
+  - CVE-2006-1451: MySQL Manager in Apple Mac OS X 10.3.9 and 10.4.6
+
+  - CVE-2007-2554: Associated Press (AP) Newspower 4.0.1 and earlier
+
+  - CVE-2007-6081: AdventNet EventLog Analyzer build 4030
+
+  - CVE-2009-0919: XAMPP
+
+  - CVE-2014-3419: Infoblox NetMRI before 6.8.5
+
+  - CVE-2015-4669: Xsuite 2.x
+
+  - CVE-2016-6531, CVE-2018-15719: Open Dental before version 18.4
+
+  - CVE-2024-22901: Vinchin Backup &amp; Recovery 7.2 and prior
+
+  Other products might be affected as well.|impact=|solution=- Change the password as soon as possible
+
+  - Contact the vendor for other possible fixes / updates|vuldetect=|solution_type=Mitigation</tags><solution type='Mitigation'>- Change the password as soon as possible
+
+  - Contact the vendor for other possible fixes / updates</solution><refs><ref type="cve" id="CVE-2001-0645"/><ref type="cve" id="CVE-2002-1809"/><ref type="cve" id="CVE-2004-1532"/><ref type="cve" id="CVE-2004-2357"/><ref type="cve" id="CVE-2006-1451"/><ref type="cve" id="CVE-2007-2554"/><ref type="cve" id="CVE-2007-6081"/><ref type="cve" id="CVE-2009-0919"/><ref type="cve" id="CVE-2014-3419"/><ref type="cve" id="CVE-2015-4669"/><ref type="cve" id="CVE-2016-6531"/><ref type="cve" id="CVE-2018-15719"/><ref type="cve" id="CVE-2024-22901"/></refs></nvt><scan_nvt_version>2025-09-09T05:38:49Z</scan_nvt_version><threat>Critical</threat><severity>9.8</severity><qod><value>95</value><type></type></qod><description>It was possible to login as user &quot;root&quot; with an empty password.
+</description><original_threat>Critical</original_threat><original_severity>9.8</original_severity><compliance>undefined</compliance></result><result id="65199cbc-3a2b-4fc2-8d4b-1ebca8dc2363"><name>Apache Tomcat AJP RCE Vulnerability (Ghostcat) - Active Check</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:21:27Z</modification_time><comment></comment><creation_time>2026-05-21T08:21:27Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>8009/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.143545"><type>nvt</type><name>Apache Tomcat AJP RCE Vulnerability (Ghostcat) - Active Check</name><family>Web Servers</family><cvss_base>9.8</cvss_base><severities score="9.8"><severity type="cvss_base_v3"><origin>NVD</origin><date>2021-02-24T12:15:00Z</date><score>9.8</score><value>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</value></severity></severities><tags>cvss_base_vector=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H|summary=Apache Tomcat is prone to a remote code execution (RCE)
+  vulnerability in the AJP connector dubbed &apos;Ghostcat&apos;.|insight=Apache Tomcat server has a file containing vulnerability, which
+  can be used by an attacker to read or include any files in all webapp directories on Tomcat, such
+  as webapp configuration files or source code.|affected=Apache Tomcat versions prior 7.0.100, 8.5.51 or 9.0.31 when the
+  AJP connector is enabled.
+
+  Other products like JBoss or Wildfly which are using Tomcat might be affected as well.|impact=|solution=- Update Apache Tomcat to version 7.0.100, 8.5.51, 9.0.31 or
+  later
+
+  - For other products using Tomcat please contact the vendor for more information on fixed
+  versions|vuldetect=Sends a crafted AJP request and checks the response.|solution_type=VendorFix</tags><solution type='VendorFix'>- Update Apache Tomcat to version 7.0.100, 8.5.51, 9.0.31 or
+  later
+
+  - For other products using Tomcat please contact the vendor for more information on fixed
+  versions</solution><refs><ref type="cve" id="CVE-2020-1938"/><ref type="url" id="https://lists.apache.org/thread/bnys5lvg1875dsslkkx2vmwxv833l35x"/><ref type="url" id="https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.31"/><ref type="url" id="https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.51"/><ref type="url" id="https://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.100"/><ref type="url" id="https://web.archive.org/web/20250114042903/https://www.chaitin.cn/en/ghostcat"/><ref type="url" id="https://www.cnvd.org.cn/flaw/show/CNVD-2020-10487"/><ref type="url" id="https://github.com/YDHCUI/CNVD-2020-10487-Tomcat-Ajp-lfi"/><ref type="url" id="https://securityboulevard.com/2020/02/patch-your-tomcat-and-jboss-instances-to-protect-from-ghostcat-vulnerability-cve-2020-1938-and/"/><ref type="url" id="https://www.cisa.gov/known-exploited-vulnerabilities-catalog"/><ref type="cisa" id="Known Exploited Vulnerability (KEV) catalog"/><ref type="cert-bund" id="WID-SEC-2024-0528"/><ref type="cert-bund" id="WID-SEC-2023-2480"/><ref type="cert-bund" id="CB-K20/0711"/><ref type="cert-bund" id="CB-K20/0705"/><ref type="cert-bund" id="CB-K20/0693"/><ref type="cert-bund" id="CB-K20/0555"/><ref type="cert-bund" id="CB-K20/0543"/><ref type="cert-bund" id="CB-K20/0154"/><ref type="dfn-cert" id="DFN-CERT-2021-1736"/><ref type="dfn-cert" id="DFN-CERT-2020-1508"/><ref type="dfn-cert" id="DFN-CERT-2020-1413"/><ref type="dfn-cert" id="DFN-CERT-2020-1276"/><ref type="dfn-cert" id="DFN-CERT-2020-1134"/><ref type="dfn-cert" id="DFN-CERT-2020-0850"/><ref type="dfn-cert" id="DFN-CERT-2020-0835"/><ref type="dfn-cert" id="DFN-CERT-2020-0821"/><ref type="dfn-cert" id="DFN-CERT-2020-0569"/><ref type="dfn-cert" id="DFN-CERT-2020-0557"/><ref type="dfn-cert" id="DFN-CERT-2020-0501"/><ref type="dfn-cert" id="DFN-CERT-2020-0381"/></refs></nvt><scan_nvt_version>2026-03-18T05:59:10Z</scan_nvt_version><threat>Critical</threat><severity>9.8</severity><qod><value>99</value><type></type></qod><description>It was possible to read the file &quot;/WEB-INF/web.xml&quot; through the AJP connector.
+
+Result:
+
+AB 8\x0004 Ã\x0088 \x0002OK  \x0001 \x000CContent-Type  \x001Ctext/html;charset=ISO-8859-1 AB\x001FÃ¼\x0003\x001FÃ¸&lt;!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the &quot;License&quot;); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+   &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+    &lt;title&gt;Apache Tomcat/5.5&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    /*&lt;![CDATA[*/
+      body {
+          color: #000000;
+          background-color: #FFFFFF;
+	  font-family: Arial, &quot;Times New Roman&quot;, Times, serif;
+          margin: 10px 0px;
+      }
+
+    img {
+       border: none;
+    }
+    
+    a:link, a:visited {
+        color: blue
+    }
+
+    th {
+        font-family: Verdana, &quot;Times New Roman&quot;, Times, serif;
+        font-size: 110%;
+        font-weight: normal;
+        font-style: italic;
+        background: #D2A41C;
+        text-align: left;
+    }
+
+    td {
+        color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    td.menu {
+        background: #FFDC75;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .code {
+        color: #000000;
+        font-family: &quot;Courier New&quot;, Courier, monospace;
+        font-size: 110%;
+        margin-left: 2.5em;
+    }
+    
+     #banner {
+        margin-bottom: 12px;
+     }
+
+     p#congrats {
+         margin-top: 0;
+         font-weight: bold;
+         text-align: center;
+     }
+
+     p#footer {
+         text-align: right;
+         font-size: 80%;
+     }
+     /*]]&gt;*/
+   &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;!-- Header --&gt;
+&lt;table id=&quot;banner&quot; width=&quot;100%&quot;&gt;
+    &lt;tr&gt;
+      &lt;td align=&quot;left&quot; style=&quot;width:130px&quot;&gt;
+        &lt;a href=&quot;http://tomcat.apache.org/&quot;&gt;
+	  &lt;img src=&quot;tomcat.gif&quot; height=&quot;92&quot; width=&quot;130&quot; alt=&quot;The Mighty Tomcat - MEOW!&quot;/&gt;
+	&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td align=&quot;left&quot; valign=&quot;top&quot;&gt;&lt;b&gt;Apache Tomcat/5.5&lt;/b&gt;&lt;/td&gt;
+      &lt;td align=&quot;right&quot;&gt;
+        &lt;a href=&quot;http://www.apache.org/&quot;&gt;
+	  &lt;img src=&quot;asf-logo-wide.gif&quot; height=&quot;51&quot; width=&quot;537&quot; alt=&quot;The Apache Software Foundation&quot;/&gt;
+	&lt;/a&gt;
+       &lt;/td&gt;
+     &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;
+
+        &lt;!-- Table of Contents --&gt;
+        &lt;td valign=&quot;top&quot;&gt;
+            &lt;table width=&quot;100%&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;3&quot;&gt;
+                &lt;tr&gt;
+		  &lt;th&gt;Administration&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+		  &lt;td class=&quot;menu&quot;&gt;
+		    &lt;a href=&quot;manager/status&quot;&gt;Status&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;admin&quot;&gt;Tomcat&amp;nbsp;Administration&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;manager/html&quot;&gt;Tomcat&amp;nbsp;Manager&lt;/a&gt;&lt;br/&gt;
+                    &amp;nbsp;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+
+	    &lt;br /&gt;
+            &lt;table width=&quot;100%&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;3&quot;&gt;
+                &lt;tr&gt;
+		  &lt;th&gt;Documentation&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td class=&quot;menu&quot;&gt;
+                    &lt;a href=&quot;RELEASE-NOTES.txt&quot;&gt;Release&amp;nbsp;Notes&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;tomcat-docs/changelog.html&quot;&gt;Change&amp;nbsp;Log&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;tomcat-docs&quot;&gt;Tomcat&amp;nbsp;Documentation&lt;/a&gt;&lt;br/&gt;                        &amp;nbsp;
+                    &amp;nbsp;
+		    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+	    
+            &lt;br/&gt;
+            &lt;table width=&quot;100%&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;3&quot;&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;Tomcat Online&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td class=&quot;menu&quot;&gt;
+                    &lt;a href=&quot;http://tomcat.apache.org/&quot;&gt;Home&amp;nbsp;Page&lt;/a&gt;&lt;br/&gt;
+		    &lt;a href=&quot;http://tomcat.apache.org/faq/&quot;&gt;FAQ&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;http://tomcat.apache.org/bugreport.html&quot;&gt;Bug&amp;nbsp;Database&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;http://issues.apache.org/bugzilla/buglist.cgi?bug_status=UNCONFIRMED&amp;amp;bug_status=NEW&amp;amp;bug_status=ASSIGNED&amp;amp;bug_status=REOPENED&amp;amp;bug_status=RESOLVED&amp;amp;resolution=LATER&amp;amp;resolution=REMIND&amp;amp;resolution=---&amp;amp;bugidtype=include&amp;amp;product=Tomcat+5&amp;amp;cmdtype=doit&amp;amp;order=Importance&quot;&gt;Open Bugs&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;http://mail-archives.apache.org/mod_mbox/tomcat-users/&quot;&gt;Users&amp;nbsp;Mailing&amp;nbsp;List&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;http://mail-archives.apache.org/mod_mbox/tomcat-dev/&quot;&gt;Developers&amp;nbsp;Mailing&amp;nbsp;List&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;irc://irc.freenode.net/#tomcat&quot;&gt;IRC&lt;/a&gt;&lt;br/&gt;
+		    &amp;nbsp;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+	    
+            &lt;br/&gt;
+            &lt;table width=&quot;100%&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;3&quot;&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;Examples&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td class=&quot;menu&quot;&gt;
+                    &lt;a href=&quot;jsp-examples/&quot;&gt;JSP&amp;nbsp;Examples&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;servlets-examples/&quot;&gt;Servlet&amp;nbsp;Examples&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;webdav/&quot;&gt;WebDAV&amp;nbsp;capabilities&lt;/a&gt;&lt;br/&gt;
+     		    &amp;nbsp;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+	    
+            &lt;br/&gt;
+            &lt;table width=&quot;100%&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;3&quot;&gt;
+                &lt;tr&gt;
+		  &lt;th&gt;Miscellaneous&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td class=&quot;menu&quot;&gt;
+                    &lt;a href=&quot;http://java.sun.com/products/jsp&quot;&gt;Sun&apos;s&amp;nbsp;Java&amp;nbsp;Server&amp;nbsp;Pages&amp;nbsp;Site&lt;/a&gt;&lt;br/&gt;
+                    &lt;a href=&quot;http://java.sun.com/products/servlet&quot;&gt;Sun&apos;s&amp;nbsp;Servlet&amp;nbsp;Site&lt;/a&gt;&lt;br/&gt;
+    		    &amp;nbsp;
+                  &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/td&gt;
+
+        &lt;td style=&quot;width:20px&quot;&gt;&amp;nbsp;&lt;/td&gt;
+	
+        &lt;!-- Body --&gt;
+        &lt;td align=&quot;left&quot; valign=&quot;top&quot;&gt;
+          &lt;p id=&quot;congrats&quot;&gt;If you&apos;re seeing this page via a web browser, it means you&apos;ve setup Tomcat successfully. Congratulations!&lt;/p&gt;
+ 
+          &lt;p&gt;As you may have guessed by now, this is the default Tomcat home page. It can be found on the local filesystem at:&lt;/p&gt;
+          &lt;p class=&quot;code&quot;&gt;$CATALINA_HOME/webapps/ROOT/index.jsp&lt;/p&gt;
+	  
+          &lt;p&gt;where &quot;$CATALINA_HOME&quot; is the root of the Tomcat installation directory. If you&apos;re seeing this page, and you don&apos;t think you should be, then either you&apos;re either a user who has arrived at new installation of Tomcat, or you&apos;re an administrator who hasn&apos;t got his/her setup quite right. Providing the latter is the case, please refer to the &lt;a href=&quot;tomcat-docs&quot;&gt;Tomcat Documentation&lt;/a&gt; for more detailed setup and administration information than is found in the INSTALL file.&lt;/p&gt;
+
+            &lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt; This page is precompiled. If you change it, this page will not change since
+                  it was compiled into a servlet at build time.
+                  (See &lt;tt&gt;$CATALINA_HOME/webapps/ROOT/WEB-INF/web.xml&lt;/tt&gt; as to how it was mapped.)
+            &lt;/p&gt;
+
+            &lt;p&gt;&lt;b&gt;NOTE: For security reasons, using the administration webapp
+            is restricted to users with role &quot;admin&quot;. The manager webapp
+            is restricted to users with role &quot;manager&quot;.&lt;/b&gt;
+            Users are defined in &lt;code&gt;$CATALINA_HOME/conf/tomcat-users.xml&lt;/code&gt;.&lt;/p&gt;
+
+            &lt;p&gt;Included with this release are a host of sample Servlets and JSPs (with associated source code), extensive documentation (including the Servlet 2.4 and JSP 2.0 API JavaDoc), and an introductory guide to developing web applications.&lt;/p&gt;
+
+            &lt;p&gt;Tomcat mailing lists are available at the Tomcat project web site:&lt;/p&gt;
+
+           &lt;ul&gt;
+               &lt;li&gt;&lt;b&gt;&lt;a href=&quot;mailto:users@tomcat.apache.org&quot;&gt;users@tomc
+</description><original_threat>Critical</original_threat><original_severity>9.8</original_severity><compliance>undefined</compliance></result><result id="589c88f8-5217-494d-88cd-adb769b84d0d"><name>DistCC RCE Vulnerability (CVE-2004-2687)</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:15:19Z</modification_time><comment></comment><creation_time>2026-05-21T08:15:19Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>3632/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.103553"><type>nvt</type><name>DistCC RCE Vulnerability (CVE-2004-2687)</name><family>Gain a shell remotely</family><cvss_base>9.3</cvss_base><severities score="9.3"><severity type="cvss_base_v2"><origin></origin><date>2012-08-23T14:02:21Z</date><score>9.3</score><value>AV:N/AC:M/Au:N/C:C/I:C/A:C</value></severity></severities><tags>cvss_base_vector=AV:N/AC:M/Au:N/C:C/I:C/A:C|summary=DistCC is prone to a remote code execution (RCE)
+  vulnerability.|insight=DistCC 2.x, as used in XCode 1.5 and others, when not configured
+  to restrict access to the server port, allows remote attackers to execute arbitrary commands via
+  compilation jobs, which are executed by the server without authorization checks.|affected=|impact=DistCC by default trusts its clients completely that in turn
+  could allow a malicious client to execute arbitrary commands on the server.|solution=Vendor updates are available. Please see the references for
+  more information.
+
+  For more information about DistCC&apos;s security see the references.|vuldetect=|solution_type=VendorFix</tags><solution type='VendorFix'>Vendor updates are available. Please see the references for
+  more information.
+
+  For more information about DistCC&apos;s security see the references.</solution><refs><ref type="cve" id="CVE-2004-2687"/><ref type="url" id="https://distcc.github.io/security.html"/><ref type="url" id="https://web.archive.org/web/20150511045306/http://archives.neohapsis.com:80/archives/bugtraq/2005-03/0183.html"/><ref type="dfn-cert" id="DFN-CERT-2019-0381"/></refs></nvt><scan_nvt_version>2022-07-07T10:16:06Z</scan_nvt_version><threat>Critical</threat><severity>9.3</severity><qod><value>99</value><type></type></qod><description>It was possible to execute the &quot;id&quot; command.
+
+Result: uid=1(daemon) gid=1(daemon)
+</description><original_threat>Critical</original_threat><original_severity>9.3</original_severity><compliance>undefined</compliance></result><result id="abf3ba77-983f-4139-9c0b-e53c1eb53749"><name>VNC Brute Force Login</name><owner><name>admin</name></owner><modification_time>2026-05-21T08:13:34Z</modification_time><comment></comment><creation_time>2026-05-21T08:13:34Z</creation_time><report id="0dc3f4be-3f1a-47ad-899d-6ca43d6d3713"/><task id="f65466ca-648f-461f-911d-7b3c85967fcb"><name>Metasploitable2 Scan</name></task><host>10.0.2.3<asset asset_id="3bdf2ee6-5edb-478f-bb91-a7cdbbc33d4a"/><hostname></hostname></host><port>5900/tcp</port><nvt oid="1.3.6.1.4.1.25623.1.0.106056"><type>nvt</type><name>VNC Brute Force Login</name><family>Brute force attacks</family><cvss_base>9.0</cvss_base><severities score="9.0"><severity type="cvss_base_v2"><origin></origin><date>2015-12-10T02:59:19Z</date><score>9.0</score><value>AV:N/AC:L/Au:N/C:C/I:P/A:P</value></severity></severities><tags>cvss_base_vector=AV:N/AC:L/Au:N/C:C/I:P/A:P|summary=Try to log in with given passwords via VNC protocol.|insight=This script tries to authenticate to a VNC server with the
+  passwords set in the password preference. It will also test and report if no authentication /
+  password is required at all.
+
+  Note: Some VNC servers have a blacklisting scheme that blocks IP addresses after five unsuccessful
+  connection attempts for a period of time. The script will abort the brute force attack if it
+  encounters that it gets blocked.
+
+  Note as well that passwords can be max. 8 characters long.|affected=|impact=|solution=Change the password to something hard to guess or enable
+  password protection at all.|vuldetect=|solution_type=Mitigation</tags><solution type='Mitigation'>Change the password to something hard to guess or enable
+  password protection at all.</solution></nvt><scan_nvt_version>2021-07-23T07:56:26Z</scan_nvt_version><threat>Critical</threat><severity>9.0</severity><qod><value>95</value><type></type></qod><description>It was possible to connect to the VNC server with the password: password
+</description><original_threat>Critical</original_threat><original_severity>9</original_severity><compliance>undefined</compliance></result><filters id=""><term>apply_overrides=0 min_qod=70 sort-reverse=severity rows=10 first=1</term><keywords><keyword><column>apply_overrides</column><relation>=</relation><value>0</value></keyword><keyword><column>min_qod</column><relation>=</relation><value>70</value></keyword><keyword><column>sort-reverse</column><relation>=</relation><value>severity</value></keyword><keyword><column>rows</column><relation>=</relation><value>10</value></keyword><keyword><column>first</column><relation>=</relation><value>1</value></keyword></keywords></filters><sort><field>severity<order>descending</order></field></sort><results start="1" max="10"/><result_count>632<filtered>157</filtered><page>10</page></result_count></get_results_response>
