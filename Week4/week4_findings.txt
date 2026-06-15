@@ -1,0 +1,8 @@
+Week 4 Findings - Red Team Lab
+FID001 | T1071 | CVSS 8.5 | PoshC2 C2 Setup | Network monitoring
+FID002 | T1580 | CVSS 7.5 | S3 Misconfiguration | Bucket policies
+FID003 | T1566 | CVSS 7.5 | Samba Exploit | Email filtering
+FID004 | T1059 | CVSS 8.0 | msfvenom Evasion | EDR deployment
+FID005 | T1548 | CVSS 9.0 | IAM PrivEsc | Least privilege
+FID006 | T1053 | CVSS 8.5 | Crontab Persistence | File integrity
+FID007 | T1003 | CVSS 9.0 | Shadow File Dump | Password hashing
